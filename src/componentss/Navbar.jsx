@@ -1,19 +1,30 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react'
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <h2>Krishna GS</h2>
-      <div className="nav-links">
-        <NavLink to="/" className={({ isActive }) => (isActive ? "active nav-link" : "nav-link")}>Home</NavLink>
-        <NavLink to="/about" className={({ isActive }) => (isActive ? "active nav-link" : "nav-link")}>About</NavLink>
-        <NavLink to="/skills" className={({ isActive }) => (isActive ? "active nav-link" : "nav-link")}>Skills</NavLink>
-        <NavLink to="/projects" className={({ isActive }) => (isActive ? "active nav-link" : "nav-link")}>Projects</NavLink>
-        <NavLink to="/contact" className={({ isActive }) => (isActive ? "active nav-link" : "nav-link")}>Contact</NavLink>
-      </div>
-    </nav>
-  );
-};
+    <header className="navbar">
+      <a className="brand" href="#home" >
+        Krishna GS
+      </a>
 
-export default Navbar;
+      <nav className="nav-links" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skillsets</a>
+        <a href="#projects">Initiatives</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a
+        className="nav-cta"
+        href="https://www.linkedin.com/in/krishna-gs-32689b2bb"
+        target="_blank"
+        rel="noreferrer"
+      >
+        LinkedIn
+      </a>
+    </header>
+  )
+}
+
+export default Navbar

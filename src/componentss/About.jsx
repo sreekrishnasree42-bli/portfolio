@@ -1,69 +1,54 @@
-import React from "react";
-import profile from "../assets/images/my profile3.jpeg";
+import React from 'react'
+import profile from '../assets/images/my profile3.jpeg'
+
+const highlights = [
+  { label: 'Projects Built', value: '8+' },
+  { label: 'Core Stack', value: 'MERN' },
+  { label: 'Training Focus', value: 'Practical' }
+]
 
 const About = () => {
   return (
-    <section id="about" className="section about-section">
-      <h2 style={{textAlign:'center', marginBottom:'40px'}}>About Me</h2>
-      <div className="about-grid">
-        <img src={profile} alt="Krishna GS" className="about-avatar" />
-        <div className="about-content">
-          <h1>Krishna GS</h1>
-          <h3>MERN Stack Developer | IT Student</h3>
+    <section id="about" className="section-wrap">
+      <div className="section-head">
+        <p>About Me</p>
+        <h2>Developer at Your Reach</h2>
+      </div>
+
+      <div className="about-layout">
+        <img src={profile} alt="Krishna GS" className="about-image" />
+
+        <article className="about-copy">
+          <h3>I'm Krishna GS</h3>
+          <h4>MERN Stack Developer | IT Graduate</h4>
           <p>
-            Hi — I'm Krishna, an IT student and full-stack developer from
-            Trivandrum, India. I'm passionate about building robust, scalable web applications
-            using the MERN stack (MongoDB, Express, React, Node.js).
+            I am from Trivandrum, India, and I focus on full-stack JavaScript applications using
+            MongoDB, Express, React, and Node.js. I like writing maintainable code and shipping
+            production-ready features.
           </p>
-
           <p>
-            I enjoy creating clean, maintainable code, solving complex problems, and continuously
-            learning new technologies. My focus is on delivering production-ready applications with
-            excellent user experience and solid architecture.
-
-            I am continuously improving my skills in:
-            <ul>
-              <li>Frontend Development (React, Redux)</li>
-              <li>Backend Development (Node.js, Express)</li>
-              <li>Database Management (MongoDB, Mongoose)</li>
-            </ul>
-            <ul style={{textAlign : "center", fontSize : "18px", color : "#2d3748", marginBottom:'20px'}}>Education</ul>
-
-
+            My current direction is to keep improving architecture, API design, and frontend
+            performance while contributing to real client and product work.
           </p>
-          <div style={{padding:'20px', background:'#f7fafc', borderRadius:'10px', border:'2px solid #e2e8f0'}}>
-          <strong style={{color:'#2d3748', fontSize:'16px'}}>  NSTI(W)TRIVANDRUM<br />
-             INFORMATION TECHNOLOGY <br />
-            Year : 2023-2025 </strong>
-          <p style={{margin:'8px 0 0 0'}}></p>
-          </div>
-
-          <div style={{padding:'20px', background:'#f7fafc', borderRadius:'10px', border:'2px solid #e2e8f0'}}>
-          <strong style={{color:'#2d3748', fontSize:'16px'}}> GVHSS Pirappancode<br />
-           Computer Science <br />
-            Year : 2021-2023 </strong>
-          <p style={{margin:'8px 0 0 0'}}></p>
-          </div>
-
 
           <ul className="about-contact">
-            <li><strong>Email:</strong> krishna.gs@gmail.com</li>
-            <li><strong>Phone:</strong> +91 9544739149</li>
-            <li><strong>Location:</strong> Trivandrum, India</li>
+            <li>Email: sreekrishnasree42@gmail.com</li>
+            <li>Phone: +91 95447 39149</li>
+            <li>Location: Trivandrum, India</li>
           </ul>
-        </div>
+        </article>
       </div>
-   {/* <button className="nav-btn" onClick={() => navigate(-1)}>
-  ← Back
-</button>
 
-<button className="nav-btn" onClick={() => navigate(1)}>
-  Forward →
-</button> */}
-
-
+      {/* <div className="stats-grid">
+        {highlights.map((item) => (
+          <div key={item.label} className="stat-card">
+            <strong>{item.value}</strong>
+            <span>{item.label}</span>
+          </div>
+        ))}
+      </div> */}
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About
