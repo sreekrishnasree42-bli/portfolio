@@ -1,16 +1,118 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio web application built with React and Vite to present profile details, skills, projects, and contact information in a clean single-page layout.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is designed as a modern developer portfolio for Krishna GS.  
+It includes key sections commonly expected in a professional portfolio:
 
-## React Compiler
+- Hero/Home introduction
+- About section
+- Skills and service strengths
+- Project highlights
+- Contact details and quick message form
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The app is component-based and uses reusable UI sections for easier updates.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive single-page portfolio structure
+- Sticky-style top navigation with section anchors
+- Hero area with profile image and social links
+- About section with background and contact summary
+- Skills section describing technical strengths
+- Projects section with stack tags
+- Contact section with direct email/phone/social links
+- Footer navigation for quick in-page movement
+
+## Tech Stack
+
+- React 19
+- Vite 7
+- JavaScript (ES Modules)
+- CSS for styling
+- Material UI packages included in dependencies (`@mui/material`, `@mui/icons-material`, `@emotion/react`, `@emotion/styled`)
+
+## Project Structure
+
+```text
+portfolio/
+  src/
+    assets/
+      images/
+    componentss/
+      Navbar.jsx
+      Home.jsx
+      About.jsx
+      Skills.jsx
+      Projects.jsx
+      Contacts.jsx
+      Footer.jsx
+    App.jsx
+    App.css
+    index.css
+    main.jsx
+  public/
+  package.json
+  README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (recommended: latest LTS)
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+Vite will print a local URL (commonly `http://localhost:5173`) in the terminal.
+
+## Available Scripts
+
+- `npm run dev`: Start local development server
+- `npm run build`: Create production build in `dist/`
+- `npm run preview`: Preview the production build locally
+- `npm run lint`: Run ESLint checks
+
+## Customization Guide
+
+Update these files to personalize content:
+
+- `src/componentss/Home.jsx`: Name, title, intro text, social links
+- `src/componentss/About.jsx`: Profile summary, email, phone, location
+- `src/componentss/Skills.jsx`: Skills/services cards
+- `src/componentss/Projects.jsx`: Project list and technologies
+- `src/componentss/Contacts.jsx`: Contact cards and form text
+- `src/componentss/Footer.jsx`: Footer navigation and copyright
+
+## Build and Deployment
+
+To generate an optimized production build:
+
+```bash
+npm run build
+```
+
+The output will be created in the `dist/` folder and can be deployed to platforms such as:
+
+- Vercel
+- Netlify
+- GitHub Pages
+- Any static hosting provider
+
+## Notes
+
+- The contact form currently prevents default submit behavior and does not send data to a backend service.
+- `react-router-dom` is installed, but routing is not currently used; navigation is handled with page anchors.

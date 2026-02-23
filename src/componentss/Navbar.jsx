@@ -3,15 +3,16 @@ import React from 'react'
 const Navbar = () => {
   return (
     <header className="navbar">
-      <a className="brand" href="#home" >
-        Krishna GS
-      </a>
+      <p className="brand" aria-label="Krishna GS">
+        {/* <span className="brand-first">Krishna</span> */}
+        <span className="brand-last">Krishna GS</span>
+      </p>
 
       <nav className="nav-links" aria-label="Primary navigation">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skillsets</a>
-        <a href="#projects">Initiatives</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
 
